@@ -1,0 +1,17 @@
+<div>
+    {{ 'Modo actual: '+ (embedded ? 'Embebido' : 'No esta embebido') }}
+</div>
+<div>
+    <button (click)="activarSpinner()">Activar spinner</button>
+    <button (click)="cambiarModo()">Cambiar modo</button>
+</div>
+
+<div class="embedded">
+    <ehc-spinner *ngIf="embedded" [embedded]="true"></ehc-spinner>
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem consectetur ab consequatur ea, possimus at excepturi aperiam, praesentium illum aliquid numquam rerum nam id sequi optio recusandae dolor odit fuga.
+    </p>
+</div>
+
+<ehc-spinner *ngIf="!embedded"></ehc-spinner>
+
